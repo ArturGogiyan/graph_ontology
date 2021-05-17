@@ -1,0 +1,523 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.musicbands.com/ontologies/MusicBands.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.musicbands.com/ontologies/MusicBands.owl">
+    <Prefix name="" IRI="http://www.musicbands.com/ontologies/MusicBands.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Award"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HipHopMusic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MusicalGenre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MusicalGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Musician"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PopGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PopMusic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RapGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RockGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RockMusic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#bornIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#countryOfOrigin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDeserved"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGenre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMember"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#playedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#speaksIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#careerOver"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#careerStarted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#diedIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#disbandedIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#foundedIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#wasBorn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Abba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Agnetha_Fältskog"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Benny_Andersson"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Björn_Ulvaeus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#David_Gilmour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#English"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#George_Harrison"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Grammy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#John_Lennon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MTV_Music_Award"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nick_Mason"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paul_McCartney"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pink_Floyd"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pop_Music"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Richard_Wright"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ringo_Starr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rock_Music"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Roger_Waters"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sweden"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Beatles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#United_Kingdom"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#PopGroup"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MusicalGroup"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasGenre"/>
+                <Class IRI="#PopMusic"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RapGroup"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MusicalGroup"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasGenre"/>
+                <Class IRI="#HipHopMusic"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RockGroup"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MusicalGroup"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasGenre"/>
+                <Class IRI="#RockMusic"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#HipHopMusic"/>
+        <Class IRI="#MusicalGenre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PopGroup"/>
+        <Class IRI="#MusicalGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PopMusic"/>
+        <Class IRI="#MusicalGenre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RapGroup"/>
+        <Class IRI="#MusicalGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RockGroup"/>
+        <Class IRI="#MusicalGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RockMusic"/>
+        <Class IRI="#MusicalGenre"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#HipHopMusic"/>
+        <Class IRI="#PopMusic"/>
+        <Class IRI="#RockMusic"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#MusicalGroup"/>
+        <NamedIndividual IRI="#Abba"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musician"/>
+        <NamedIndividual IRI="#Agnetha_Fältskog"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musician"/>
+        <NamedIndividual IRI="#Benny_Andersson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musician"/>
+        <NamedIndividual IRI="#Björn_Ulvaeus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musician"/>
+        <NamedIndividual IRI="#David_Gilmour"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Language"/>
+        <NamedIndividual IRI="#English"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musician"/>
+        <NamedIndividual IRI="#George_Harrison"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Award"/>
+        <NamedIndividual IRI="#Grammy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musician"/>
+        <NamedIndividual IRI="#John_Lennon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Award"/>
+        <NamedIndividual IRI="#MTV_Music_Award"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musician"/>
+        <NamedIndividual IRI="#Nick_Mason"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musician"/>
+        <NamedIndividual IRI="#Paul_McCartney"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MusicalGroup"/>
+        <NamedIndividual IRI="#Pink_Floyd"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PopMusic"/>
+        <NamedIndividual IRI="#Pop_Music"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musician"/>
+        <NamedIndividual IRI="#Richard_Wright"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musician"/>
+        <NamedIndividual IRI="#Ringo_Starr"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RockMusic"/>
+        <NamedIndividual IRI="#Rock_Music"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musician"/>
+        <NamedIndividual IRI="#Roger_Waters"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Sweden"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MusicalGroup"/>
+        <NamedIndividual IRI="#The_Beatles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#United_Kingdom"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#countryOfOrigin"/>
+        <NamedIndividual IRI="#Abba"/>
+        <NamedIndividual IRI="#Sweden"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDeserved"/>
+        <NamedIndividual IRI="#Abba"/>
+        <NamedIndividual IRI="#MTV_Music_Award"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Abba"/>
+        <NamedIndividual IRI="#Pop_Music"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#speaksIn"/>
+        <NamedIndividual IRI="#Abba"/>
+        <NamedIndividual IRI="#English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#countryOfOrigin"/>
+        <NamedIndividual IRI="#Pink_Floyd"/>
+        <NamedIndividual IRI="#United_Kingdom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDeserved"/>
+        <NamedIndividual IRI="#Pink_Floyd"/>
+        <NamedIndividual IRI="#Grammy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Pink_Floyd"/>
+        <NamedIndividual IRI="#Rock_Music"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMember"/>
+        <NamedIndividual IRI="#Pink_Floyd"/>
+        <NamedIndividual IRI="#David_Gilmour"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMember"/>
+        <NamedIndividual IRI="#Pink_Floyd"/>
+        <NamedIndividual IRI="#Nick_Mason"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMember"/>
+        <NamedIndividual IRI="#Pink_Floyd"/>
+        <NamedIndividual IRI="#Richard_Wright"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMember"/>
+        <NamedIndividual IRI="#Pink_Floyd"/>
+        <NamedIndividual IRI="#Roger_Waters"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#speaksIn"/>
+        <NamedIndividual IRI="#Pink_Floyd"/>
+        <NamedIndividual IRI="#English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#countryOfOrigin"/>
+        <NamedIndividual IRI="#The_Beatles"/>
+        <NamedIndividual IRI="#United_Kingdom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#The_Beatles"/>
+        <NamedIndividual IRI="#Rock_Music"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMember"/>
+        <NamedIndividual IRI="#The_Beatles"/>
+        <NamedIndividual IRI="#George_Harrison"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMember"/>
+        <NamedIndividual IRI="#The_Beatles"/>
+        <NamedIndividual IRI="#John_Lennon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMember"/>
+        <NamedIndividual IRI="#The_Beatles"/>
+        <NamedIndividual IRI="#Paul_McCartney"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMember"/>
+        <NamedIndividual IRI="#The_Beatles"/>
+        <NamedIndividual IRI="#Ringo_Starr"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#speaksIn"/>
+        <NamedIndividual IRI="#The_Beatles"/>
+        <NamedIndividual IRI="#English"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDeserved"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasMember"/>
+        <ObjectProperty IRI="#playedIn"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#bornIn"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#bornIn"/>
+        <Class IRI="#Musician"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#countryOfOrigin"/>
+        <Class IRI="#MusicalGroup"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeserved"/>
+        <Class IRI="#MusicalGroup"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeserved"/>
+        <Class IRI="#Musician"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGenre"/>
+        <Class IRI="#MusicalGroup"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGenre"/>
+        <Class IRI="#Musician"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMember"/>
+        <Class IRI="#MusicalGroup"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#playedIn"/>
+        <Class IRI="#Musician"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#speaksIn"/>
+        <Class IRI="#MusicalGroup"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#speaksIn"/>
+        <Class IRI="#Musician"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#bornIn"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#countryOfOrigin"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDeserved"/>
+        <Class IRI="#Award"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGenre"/>
+        <Class IRI="#MusicalGenre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMember"/>
+        <Class IRI="#Musician"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#playedIn"/>
+        <Class IRI="#MusicalGroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#speaksIn"/>
+        <Class IRI="#Language"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#careerOver"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#careerStarted"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#diedIn"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#disbandedIn"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#foundedIn"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#wasBorn"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#careerOver"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#careerStarted"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#diedIn"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#disbandedIn"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#foundedIn"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#wasBorn"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
